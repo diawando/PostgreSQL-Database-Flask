@@ -1,6 +1,6 @@
 import os
 import psycopg2
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, redirect
 
 app = Flask(__name__)
 
@@ -21,3 +21,7 @@ def index():
     cur.close()
     conn.close()
     return render_template('index.html', books=books)
+
+@app.route('/create/', methods=('GET', 'POST'))
+def create():
+    return render_template('create.html')
