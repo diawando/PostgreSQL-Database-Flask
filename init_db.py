@@ -31,6 +31,7 @@ cur.execute('INSERT INTO books(title, author, pages_num, review)'
              'A great classic!')
             )
 
+
 cur.execute('INSERT INTO books (title, author, pages_num, review)'
             'VALUES (%s, %s, %s, %s)',
             ('Anna Karenina',
